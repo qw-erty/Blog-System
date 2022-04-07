@@ -1,0 +1,54 @@
+<%- include("partials/header"); -%>
+    <h1>Contact</h1>
+    <p>
+        Fill up the form below clearly stating the reason 
+    </p>
+
+    <form class="" action="/contact" method="post">
+        <div class="form-group">
+          <label>name</label>
+          <input class="form-control" type="text" name="contactName" placeholder="Full Name" required>
+          <label>Email</label>
+          <input type="email" name="contactEmail" class="form-control" placeholder="Email" required>
+          <label>Reason</label>
+          <select class="form-control" name="contactReason" required>
+            <option>Want to publish my blogs on Blog Bite</option>
+            <option>Error in any blog </option>
+            <option>Report any Bug</option>
+            <option>Report any unlawfull activity</option>
+            <option>Other</option>
+          </select>
+          <label>Detailed Reason </label>
+          <textarea class="form-control" name="ContactBody" rows="5" cols="30" placeholder="Write about the reason in max 300 words " required></textarea>
+        </div>
+        <!-- <button class="btn btn-primary" type="submit" name="button">submit</button> -->
+        <button type="submit" class="btn btn-primary" name="button" data-toggle="modal" data-target="#exampleModal">
+            submit
+        </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <%=responseHead%>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%=responseBody%>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </form>
+
+
+
+<%- include("partials/footer"); -%>

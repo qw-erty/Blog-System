@@ -1,0 +1,23 @@
+
+<%- include("partials/header"); -%>
+    <h1>Compose</h1>
+    <form class="" action="/compose" method="post">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle" placeholder="Write Title of your Post">
+        <label>Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30" placeholder="Write about your post in max 300 words "></textarea>
+        <label>Image URL</label>
+        <textarea class="form-control" name="postImg" rows="1" cols="30" ></textarea>
+        <label>Type</label>
+        <select class="form-control" name="postType">
+          <option>General</option>
+          <option>Financial</option>
+          <option>Technical</option>
+          <option>News</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit" name="button">Publish</button>
+    </form>
+
+<%- include("partials/footer"); -%>
